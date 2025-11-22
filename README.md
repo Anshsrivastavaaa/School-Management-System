@@ -46,20 +46,27 @@ pnpm install
 pnpm dev
 ```
 ### 📁 FOLDER STRUCTURE
+```bash
 /app              # Routes and pages
+
 /components       # UI components
+
 /hooks            # Custom hooks
+
 /lib              # Utilities & helpers
+
 /public           # Static assets
+
 /styles           # Global styles
+```
 
 🗺️FUTURE SCOPE
 
-• AI insights for identifying weak students
-• Attendance SMS/voice notification system
-• District-level analytics dashboards
-• Library & hostel management modules
-• LMS + digital content and homework automation
+- AI insights for identifying weak students
+- Attendance SMS/voice notification system
+- District-level analytics dashboards
+- Library & hostel management modules
+- LMS + digital content and homework automation
 
 🤝 CONTRIBUTING
 
@@ -72,4 +79,5 @@ MIT License
 👤 AUTHOR
 
 Ansh Srivastava
+
 B.Tech — Artificial Intelligence & Data Science
