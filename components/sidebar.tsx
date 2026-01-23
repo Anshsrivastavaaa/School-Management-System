@@ -59,7 +59,7 @@ export function Sidebar({ items, schoolName }: SidebarProps) {
             ))}
           </div>
 
-          <div className="mt-auto pt-8 absolute bottom-6 left-6 right-6">
+          <div className="mt-auto pt-8 bottom-6 left-6 right-6">
             <Button
               variant="outline"
               className="w-full bg-transparent"
