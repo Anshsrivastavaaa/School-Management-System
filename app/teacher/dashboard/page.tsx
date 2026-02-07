@@ -30,7 +30,7 @@ export default function TeacherDashboard() {
               <h1 className="text-3xl font-bold text-gray-900">Teacher Dashboard</h1>
               <p className="text-gray-600 mt-1">Class {selectedClass} - English Subject</p>
             </div>
-            <Button className="bg-green-600 hover:bg-green-700">
+            <Button className="bg-blue-600 hover:bg-blue-700">
               <Plus className="w-4 h-4 mr-2" />
               Mark Attendance
             </Button>
