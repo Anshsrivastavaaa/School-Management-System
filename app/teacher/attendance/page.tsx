@@ -52,7 +52,7 @@ export default function TeacherAttendance() {
               <h1 className="text-3xl font-bold text-gray-900">Mark Attendance</h1>
               <p className="text-gray-600 mt-1">Quick attendance marking for your class</p>
             </div>
-            <Button className="bg-green-600 hover:bg-green-700">
+            <Button className="bg-blue-600 hover:bg-blue-700">
               <Download className="w-4 h-4 mr-2" />
               Export Report
             </Button>

@@ -27,7 +27,7 @@ export default function PrincipalDashboard() {
               <h1 className="text-3xl font-bold text-gray-900">Principal Dashboard</h1>
               <p className="text-gray-600 mt-1">School Performance Overview</p>
             </div>
-            <Button className="bg-purple-600 hover:bg-purple-700">
+            <Button className="bg-blue-600 hover:bg-blue-700">
               <Download className="w-4 h-4 mr-2" />
               Export Report
             </Button>
@@ -72,7 +72,7 @@ export default function PrincipalDashboard() {
                     </div>
                     <span className="text-lg font-bold text-green-600">3</span>
                   </div>
-                  <Button className="w-full mt-4">Review All Approvals</Button>
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 mt-4">Review All Approvals</Button>
                 </div>
               </CardContent>
             </Card>
@@ -102,6 +102,26 @@ export default function PrincipalDashboard() {
                     </div>
                     <div className="text-right">
                       <p className="text-lg font-bold text-blue-600">85%</p>
+                      <p className="text-xs text-gray-600">Pass Rate</p>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <div>
+                      <p className="font-semibold text-gray-900">Class 9-A</p>
+                      <p className="text-xs text-gray-600">50 Students</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-lg font-bold text-blue-600">92%</p>
+                      <p className="text-xs text-gray-600">Pass Rate</p>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <div>
+                      <p className="font-semibold text-gray-900">Class 9-B</p>
+                      <p className="text-xs text-gray-600">51 Students</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-lg font-bold text-blue-600">95%</p>
                       <p className="text-xs text-gray-600">Pass Rate</p>
                     </div>
                   </div>
