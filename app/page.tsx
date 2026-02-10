@@ -109,7 +109,7 @@ export default function LoginPage() {
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
               {activeTab === "signin" ? "Welcome Back!" : "Create Account"}
             </h1>
-            <p className="text-gray-900">
+            <p className="text-gray-900 font-bold" >
               {activeTab === "signin"
                 ? "Sign in to access your dashboard"
                 : "Register to get started with EDUNEEV"}
@@ -122,6 +122,9 @@ export default function LoginPage() {
               <TabsTrigger
                 value="signin"
                 className="
+                     focus-visible:ring-2
+    focus-visible:ring-emerald-400
+    focus-visible:ring-offset-0
     rounded-full
     data-[state=active]:bg-teal-500
     data-[state=active]:text-white
@@ -217,7 +220,7 @@ export default function LoginPage() {
               />
             </div>
 
-            <Button className="w-full h-12 bg-teal-600 text-white">
+            <Button className="w-full h-12 bg-teal-600 hover:bg-teal-700 text-white">
               {activeTab === "signin" ? "Sign In" : "Create Account"}
             </Button>
           </form>

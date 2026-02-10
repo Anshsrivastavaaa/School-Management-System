@@ -54,7 +54,7 @@ export default function ParentFees() {
               <h1 className="text-3xl font-bold text-gray-900">Fee Management</h1>
               <p className="text-gray-600 mt-1">Track and manage fees for Rahul Kumar</p>
             </div>
-            <Button className="bg-green-600 hover:bg-green-700">
+            <Button className="bg-blue-600 hover:bg-blue-700">
               <CreditCard className="w-4 h-4 mr-2" />
               Pay Fees Online
             </Button>
@@ -65,21 +65,21 @@ export default function ParentFees() {
             <Card>
               <CardContent className="pt-6">
                 <p className="text-sm text-gray-600 mb-2">Total Paid</p>
-                <p className="text-3xl font-bold text-green-600">₹{totalPaid.toLocaleString()}</p>
-                <p className="text-xs text-green-600 mt-2">✓ Cleared</p>
+                <p className="text-3xl font-bold text-blue-600">₹{totalPaid.toLocaleString()}</p>
+                <p className="text-xs text-black-600 mt-2">✓ Cleared</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-sm text-gray-600 mb-2">Pending Amount</p>
                 <p className="text-3xl font-bold text-yellow-600">₹{totalPending.toLocaleString()}</p>
-                <p className="text-xs text-yellow-600 mt-2">! Due soon</p>
+                <p className="text-xs text-black-600 mt-2">Due soon</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
                 <p className="text-sm text-gray-600 mb-2">Payment Status</p>
-                <p className="text-3xl font-bold text-blue-600">85%</p>
+                <p className="text-3xl font-bold text-grey-600">85%</p>
                 <p className="text-xs text-gray-500 mt-2">Completion rate</p>
               </CardContent>
             </Card>
