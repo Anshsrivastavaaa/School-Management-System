@@ -74,7 +74,7 @@ export default function AdminFees() {
               <h1 className="text-3xl font-bold text-gray-900">Fee Management</h1>
               <p className="text-gray-600 mt-1">Track and manage student fees</p>
             </div>
-            <Button className="bg-green-600 hover:bg-green-700">
+            <Button className="bg-blue-600 hover:bg-blue-700">
               <Download className="w-4 h-4 mr-2" />
               Generate Report
             </Button>

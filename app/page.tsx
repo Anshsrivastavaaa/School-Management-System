@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { signIn } from "next-auth/react";
 
 type UserRole = "admin" | "principal" | "teacher" | "parent";
 
@@ -53,20 +54,32 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [activeTab, setActiveTab] = useState("signin");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Login attempt:", {
-      email,
-      password,
-      role: selectedRole,
-      rememberMe,
-    });
+    setError("");
+    setIsLoading(true);
 
-    // Find the selected role to get the redirect path
-    const roleData = roles.find((r) => r.id === selectedRole);
-    if (roleData?.href) {
-      router.push(roleData.href);
+    try {
+      const roleData = roles.find((r) => r.id === selectedRole);
+      const result = await signIn("credentials", {
+        email,
+        password,
+        role: selectedRole,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        setError("Invalid email or password. Please try again.");
+      } else {
+        router.push(roleData?.href ?? "/admin/dashboard");
+      }
+    } catch {
+      setError("An unexpected error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -220,8 +233,21 @@ export default function LoginPage() {
               />
             </div>
 
-            <Button className="w-full h-12 bg-teal-600 hover:bg-teal-700 text-white">
-              {activeTab === "signin" ? "Sign In" : "Create Account"}
+            {error && (
+              <div className="p-3 rounded-lg bg-red-500/20 border border-red-500/50 text-red-200 text-sm">
+                {error}
+              </div>
+            )}
+
+            <Button
+              className="w-full h-12 bg-teal-600 hover:bg-teal-700 text-white"
+              disabled={isLoading}
+            >
+              {isLoading
+                ? "Signing in..."
+                : activeTab === "signin"
+                  ? "Sign In"
+                  : "Create Account"}
             </Button>
           </form>
 
