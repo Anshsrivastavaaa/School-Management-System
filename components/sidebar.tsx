@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 import { LogOut, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import { signOut } from "next-auth/react"
 
 interface SidebarProps {
   items: {
@@ -63,10 +64,7 @@ export function Sidebar({ items, schoolName }: SidebarProps) {
             <Button
               variant="outline"
               className="w-full bg-transparent"
-              onClick={() => {
-                // Handle logout
-                window.location.href = "/"
-              }}
+              onClick={() => signOut({ callbackUrl: "/" })}
             >
               <LogOut className="w-4 h-4 mr-2" />
               Logout
